@@ -133,4 +133,8 @@ public class MainActivity extends AppCompatActivity {
             txtIndicaciones.setText(mensaje);
         }
     }
+
+    // Link Publico GitHub
+    // https://github.com/SinChucrut1/IMC_APP-Certamen.git
+
 }
