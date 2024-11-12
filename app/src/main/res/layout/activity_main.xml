@@ -28,7 +28,7 @@
         <Spinner
             android:id="@+id/SpinnerSexo"
             android:layout_width="match_parent"
-            android:layout_height="47dp" />
+            android:layout_height="70dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -69,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="#388E3C"
+            android:onClick="CalcularIMC"
             android:text="Calcular IMC"
             android:textSize="24sp" />
 
@@ -86,8 +87,7 @@
         <TextView
             android:id="@+id/txtIndicaciones"
             android:layout_width="match_parent"
-            android:layout_height="321dp"
-            android:text="Indicaciones:"
+            android:layout_height="278dp"
             android:textColor="#000000"
             android:textSize="24sp" />
 
