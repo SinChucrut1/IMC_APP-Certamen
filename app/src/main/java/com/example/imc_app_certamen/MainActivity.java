@@ -75,9 +75,62 @@ public class MainActivity extends AppCompatActivity {
             txtIMC.setText("");
             txtIMC.setText("Su IMC es de: " + IMC);
 
+            // mostrar indicaciones
+            MostrarIndicaciones(IMC);
+
         } else {
             Toast.makeText(this, "No se admiten campos vacios", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    // Funcion para mostrar indicaciones segun IMC
+    // Recibira de parametro un valor double
+    public void MostrarIndicaciones(Double IMC){
+        // Si IMC < 18.5, es bajo peso
+        // Si IMC >= 18.5 y <= 24.9, es adecuado
+        // Si IMC >= 25.0 y <= 29.9, sobrepeso
+        // Si IMC >= 30.0 y <= 34.9, obesidad
+
+        if (IMC < 18.5){
+            String mensaje =
+                    "Clasificacion: BAJO PESO\n" +
+                    "1) Come con mas frecuencia. Empieza poco a poco a hacer 5 o 6 comidas mas pequeñas durante el dia\n" +
+                    "2) Elige alimentos con muchos nutrientes\n" +
+                    "3) Agrega aderezos\n" +
+                    "4) Prueba licuados y batidos de frutas\n" +
+                    "5) Controla que bebes y cuando\n" +
+                    "6) Haz ejercicio";
+            txtIndicaciones.setText("");
+            txtIndicaciones.setText(mensaje);
+        } else if(IMC >= 18.5 && IMC <= 24.9){
+            String mensaje = "Felicidades! Usted mantiene una excelente alimentacion";
+            txtIndicaciones.setText("");
+            txtIndicaciones.setText(mensaje);
+
+        } else if (IMC >= 25.0 && IMC <= 29.9){
+            String mensaje =
+                    "Clasificacion: SOBREPESO\n" +
+                            "1) Haga 30 minutos de ejercicio aerobico 5 veces por semana\n" +
+                            "2) Logre un equilibrio entre el consumo de calorias y la actividad fisica\n" +
+                            "3) Limite las grasas saturadas a no mas de 7% de las calorias totales\n" +
+                            "4) Tenga una alimentacion baja en colesterol con carnes magras, frutas, verduras y cereales integrales";
+            txtIndicaciones.setText("");
+            txtIndicaciones.setText(mensaje);
+
+        } else if (IMC >= 30.0 && IMC <= 34.9){
+            String mensaje =
+                    "Clasificacion: OBESIDAD\n" +
+                            "1) Haga 30 minutos de ejercicio aerobico 5 veces por semana\n" +
+                            "2) Logre un equilibrio entre el consumo de calorias y la actividad fisica\n" +
+                            "3) Limite las grasas saturadas a no mas de 7% de las calorias totales\n" +
+                            "4) Tenga una alimentacion baja en colesterol con carnes magras, frutas, verduras y cereales integrales";
+            txtIndicaciones.setText("");
+            txtIndicaciones.setText(mensaje);
+        } else {
+            String mensaje = "Se sale de las metricas. PROXIMAMENTE...";
+            txtIndicaciones.setText("");
+            txtIndicaciones.setText(mensaje);
+        }
     }
 }
